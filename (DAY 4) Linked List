@@ -1,0 +1,31 @@
+
+
+    public static  Node insert(Node head,int data) {
+      
+      if(head==null)
+      return new Node(data);
+    
+      Node p=head;
+    
+      while(p.next!=null)
+          p=p.next;
+      
+      
+      p.next=new Node(data);
+      
+      return head;
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    }
+
