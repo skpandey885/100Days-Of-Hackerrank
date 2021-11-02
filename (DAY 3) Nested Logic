@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      
+      Scanner input=new Scanner(System.in);
+      
+      int day=input.nextInt();
+      int month=input.nextInt();
+      int year=input.nextInt();
+      
+      int day1=input.nextInt();
+      int month1=input.nextInt();
+      int year1=input.nextInt();
+      
+      
+      if(year1==year){
+          
+          if(month1==month){
+              if(day<=day1){
+                  System.out.println(0);
+                  return;
+              }else{
+                   System.out.println((day-day1)*15);
+                   return;
+              }
+          }else if(month>month1){
+             System.out.println((month-month1)*500);
+                   return;
+          }
+          
+          
+      }else if(year>year1)
+      {
+              System.out.println(10000);
+                   return;
+      }
+      
+         System.out.println(0);
+      return;
+    }
+}
