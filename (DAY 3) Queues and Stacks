@@ -1,0 +1,32 @@
+
+
+public class Solution {
+    // Write your code here.
+    Stack<Character> ss=new Stack(); 
+    Queue<Character> qq=new LinkedList<>();
+ void pushCharacter(char ch) 
+    {
+        ss.push(ch);
+        
+    }
+    
+    void enqueueCharacter(char ch){
+        qq.offer(ch);
+    }
+    
+    char popCharacter()
+    {
+       return ss.pop();
+    }
+    
+    char dequeueCharacter()
+    {
+       return qq.poll();
+    }
+    
+    
+    
+    
+    
+
+
