@@ -1,0 +1,45 @@
+
+
+    // Complete the compareLists function below.
+
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+    static boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+     
+     ArrayList<Integer> a=new ArrayList<>();
+     ArrayList<Integer> b=new ArrayList<>();
+     
+     while(head1!=null)
+       {
+           a.add(head1.data);
+           head1=head1.next;
+       }
+       
+          while(head2!=null)
+       {
+           b.add(head2.data);
+           head2=head2.next;
+       }
+       
+       if(a.size()!=b.size())
+       return false;
+       
+       return a.equals(b);
+       
+       
+       
+     
+     
+     
+     
+     
+             
+    }
+
