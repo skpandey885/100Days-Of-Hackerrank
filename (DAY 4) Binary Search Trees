@@ -1,0 +1,15 @@
+
+
+	public static int getHeight(Node root){
+      
+      if(root==null)
+      return -1;
+      
+       int x=getHeight(root.left);
+      int y=getHeight(root.right);
+      
+      return (int)(Math.max(x,y))+1;
+     
+      
+    }
+
