@@ -1,0 +1,42 @@
+
+
+    // Complete the hasCycle function below.
+
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+    static boolean hasCycle(SinglyLinkedListNode head) {
+        
+        if(head==null)
+        return false;
+        
+        SinglyLinkedListNode x=head;
+        
+        Set<String> ss=new HashSet<>();
+        
+        
+        while(x!=null){
+            
+            if(ss.contains(String.valueOf(x.hashCode())))
+            {
+                return true;
+            }
+            
+            ss.add(String.valueOf(x.hashCode()));
+                
+                x=x.next;
+            
+        }
+        
+        return false;
+    
+    
+    
+    }
+
