@@ -1,0 +1,42 @@
+
+
+    // Complete the findMergeNode function below.
+
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+    static int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+
+       
+       if(head1==null || head2==null)
+       return 0;
+       
+       SinglyLinkedListNode x=head1,y=head2;       
+       
+       Set<SinglyLinkedListNode> ss=new HashSet<>();
+       
+       while(x!=null){
+           ss.add(x);
+           x=x.next;
+       }
+       
+       while(y!=null){
+           if(ss.contains(y)){
+             return y.data;    
+           }
+           ss.add(y);
+           y=y.next;
+           
+       }
+
+ return 0;
+
+
+    }
+
